@@ -1,0 +1,18 @@
+Вспомним схему БД для библиотеки:
+Reader( ID, LastName, FirstName, Address, BirthDate)
+Book ( ISBN, Title, Author, PagesNum, PubYear, PubName)
+Publisher ( PubName, PubKind)
+Category ( CategoryName, ParentCat)
+Copy ( ISBN, CopyNumber, Shelf, Position)
+Borrowing ( ReaderNr, ISBN, CopyNumber, ReturnDate)
+BookCat ( ISBN, CategoryName )  
+
+
+Напишите SQL-запросы, возвращающие следующие данные:
+
+Все фамилии (LastName) читателей (Reader) из Москвы
+Все названия (Title) и авторов (Author) книг (Books), опубликованных издателями (Publisher) научной или справочной литературы (pubKind либо 'Science', либо 'Reference')
+Все названия (Title) и авторов (Author) книг (Books), которые брал Иван Иванов.
+Все идентификаторы (ISBN) книг (Book), относящихся к категории "Mountains", но не относящихся к категории "Travel". Подкатегории не учитывать.
+Все фамилии и имена читателей, которые вернули хотя бы одну книгу (Borrowing.ReturnDate is not null)
+Все фамилии и имена читателей, которые брали (Borrowing)  хотя бы одну книгу (Book), которую брал Иван Иванов. Ответ не должен содержать самого Ивана Иванова.

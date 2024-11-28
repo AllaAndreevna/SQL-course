@@ -1,0 +1,10 @@
+Мессенджер:
+
+User (UserID(PK), ChannelID (FK), SubscribedFor(list also)(FK)) 
+Channel (ChannelID(PK), Title, Description, AdminID(FK)) 
+Message (UserID (FK)/AdminID(FK), AdresseeID(list also), EmodziID(list also if >1 emodzi), LinkToMessageData, LinkToFileData, Status(Sent/Got/Resent, Type(Private/Public, TimeWhenSent)))
+Files (UserID (FK), AdresseeID(FK), LinkToFileData)
+
+
+Пользователи должны иметь возможность пересылать полученные и отправленные сообщения. 
+
